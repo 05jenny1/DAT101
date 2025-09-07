@@ -12,31 +12,49 @@
     <ol>
       <li>Where should you use constants, and where should you use variables? Can they all be constants?</li>
       <p>
-				[Replace this with you answer]
+We use constants when we can give it one specific value that won’t change throughout the code. If we know the value is going to differ, we want to use let instead. 
+We can’t make every variable a constant, but in every instance, we are able to, we should. A code of mostly constants will be more predictable. We know we don’t have any variables that can get reassigned a new value by mistake.  
+There are ways “around” not being able to reassign values in constants. If a constant holds an array or an object for example, we can change the content of the specific object or array within the constant. 
 			</p>
       <li>How do parentheses affect the arithmetic outcome of an expression?</li>
       <p>
-				[Replace this with you answer]
+The mathematical operators in JavaScript work in the same way as they would for a calculator. They follow the same set of “rules”, they prioritize in the same way: 
+1.	Parentheses 
+2.	Exponentiation
+3.	Multiplication and Division
+4.	Addition and Subtraction
+Ex: 	
+let result = 3 + 2 * 3;	
+In the code above the result will come out as 9, not as 15. That’s because the code will look at the multiplication before the addition. 3 + (2 * 3) = 3 + 6 = 9. If we want the result to be 15, we must use parentheses, like below: 
+let result = (3 + 2) * 3;
+This will result in 15. (5) * 3 = 15. This technique works because the code will prioritize and solve parentheses before multiplication. 
 			</p>
       <li>How do we limit floating-point numbers to a given number of decimals?</li>
       <p>
-				[Replace this with you answer]
+We can use Math.toFixed() for example. Where we can give an exact number of decimals we want to print out in our answer. If we use .toFixed we will get a string. 
+If we need to have the value of a number not a string, we can convert back by using the Number() command. Or we can use Math.round, this command will not convert the number to string, but this command won’t return an exact number of decimals. 
 			</p>
       <li>How can we compare two floating-point values to see if they are equal (is 12.199999 the same as 12.2)?</li>
       <p>
-				[Replace this with you answer]
+If we had to exact numbers I would use == to check if the two numbers were equal. But if we do this with two floating-point values the system won’t give us the exact value back. The computer store decimal numbers in binary, and they can’t be represented exactly. So even if we have two numbers, we would consider equal, the computer wouldn’t. The binary representation is slightly different. 
+Therefore, I would rather use .toFixed. I would round both numbers to a fixed number before comparing them. 
 			</p>
       <li>What do comparison operators return, and how can we check if they are FALSE or TRUE?</li>
       <p>
-				[Replace this with you answer]
+When we use comparison operators in JavaScript, we will get a Boolean value in return, either true or false. 
+We can use If or while statements to check the values, which allows us to execute the code based on whether the comparison is true or false. 
 			</p>
       <li>How does the Math.random() function work, and what can it be used for?</li>
       <p>
-				[Replace this with you answer]
+The Math.random() function will give us a random float number in return. The number differs from 0 (being the lowest) up to almost 1 (0.9999). We can also specify a specific range we want the random number to originate from. It will always give us a decimal number in return if we want an integer, we will have to use functions like .floor or .ceil.
+The function is extremely useful. In any case, where we need a random number, it works great. Also works great for randomizing things like movement, color or timing for example. 
 			</p>
       <li>What is modulus (%), and when do we need this operator in mathematical operations?</li>
       <p>
-				[Replace this with you answer]
+The operator will give us the remainder of a division between two numbers. Ex: 
+10 % 3  will return 1 because 10 / 3 = 3, and we have 1 left
+15 % 5  will return 0 because 15 / 5 = 3 and there is nothing left.
+It is often useful, as in Part 10 of this task, where we have to figure out how many weeks there is in a certain number of days, but we are still interested in the remaining days, it’s good for calculating leftover values. 
 			</p>
     </ol>
 		<script type="module" src="./task_2-2.mjs" defer></script>
