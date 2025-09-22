@@ -11,12 +11,31 @@
     </div>
     <ol>
       <li>Discuss the behavior of part 1, What happens when the wake-up time is not 7 and what happens when it is exactly 7?</li>
-      <p>[Replace this with you answer]</p>
+      <p>
+        When the wake-up time Is exactly 7, the condition in the if statement evaluates to true and then runs the code inside of the if block and displays: “If I wake up at exactly 7, then I can catch the bus to school.” If the wake-up time is not
+        exactly 7, the condition will evaluate to false and therefore the program doesn’t run any code since we haven’t created the else statement yet. The program won’t display anything.
+      </p>
+
       <li>Same as question #1. How ever the answer should now be different. Discuss the behavior of part 2, What happens when the wake-up time is not 7 and what happens when it is exactly 7?</li>
-      <p>[Replace this with you answer]</p>
+      <p>
+        When the wake-up time is not 7 (for example 6 or 8), the condition evaluates to false. Therefore, the program will run the else branch of the statement which outputs: “If I wake up at exactly X, I have to take the car to school.”When the
+        wake-up time is exactly 7 the condition evaluates to true. As a result of this, the program will output as it runs only the if branch and not else: “If I wake up at exactly 7, I can catch the bus to school.”
+      </p>
+
       <li>Discuss the behavior of part 3, what happens when wake time is less than 7 or greater than 8?</li>
-      <p>[Replace this with you answer]</p>
+      <p>
+        When the wake-up time is less than 7 both the “if” and “else if” conditions evaluate to false. The program will therefore follow and run the last branch, the “else” branch. It will run and the program will display: “If I wake up at exactly X,
+        I have to take the car to school.” If the wake-up time is greater than 8, the same process will happen. Since none of the conditions above will be true the last branch in the statement will run, the else branch and the program will display
+        the line as written above.
+      </p>
+
       <li>Discuss the behavior for part 4, what happens if the number is exactly 0, is zero positive or negative?</li>
+      <p>
+        In the current If-else program we are just checking if the number is positive or negative. If the number is more than 0 the “if” branch will run. Therefore, the number will be positive and the program will display: “Positive”. If the number
+        is less than 0 the conditions of the “if” branch won’t be true and the program will run the “else” branch, and the program will display: “Negative”. This is slightly problematic, especially for number 0 which is neither positive nor negative.
+        In the instance were the number = 0 the “if” statement will not be true, therefor the code will run the “else” branch and display: “Negative”. Even though the number 0 isn’t negative. The code we add in part 5 is therefore very useful to
+        differentiate between exactly 0 and negative numbers.
+      </p>
     </ol>
     <script type="module" src="./task_3-1.mjs" defer></script>
   </body>

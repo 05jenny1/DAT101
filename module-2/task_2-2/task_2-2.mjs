@@ -103,7 +103,7 @@ printOut("Numbers of characters in the text:  " + text.length);
 
 printOut("The character at the position 19 in the text:  " + text[19]);
 
-printOut("The characters at position number 35 and 8 characters forward" + text.slice (35, 35 + 8));
+printOut("The characters at position number 35 and 8 characters forward:  " + text.slice (35, 35 + 8));
 
 printOut("Index of which the word earth starts:  " + text.indexOf("earth"));
 
