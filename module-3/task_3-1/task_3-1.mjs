@@ -10,7 +10,7 @@ printOut("Wake up time:  " + wakeUpTime);
 if (wakeUpTime === 7) {
   printOut("If I wake up at exactly " + wakeUpTime + ", I can take the bus to school.");
 } else if (wakeUpTime === 8) {
-  printOut("If I wake up at exactly " + wakeUpTime + ", I can take the train to school");
+  printOut("If I wake up at exactly " + wakeUpTime + ", I can take the train to school.");
 } else {
   printOut("If I wake up at exactly " + wakeUpTime + ", I have to take the car to school.");
 }
