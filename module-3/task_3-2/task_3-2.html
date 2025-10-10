@@ -10,8 +10,39 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>In part 1, is it possible to solve the problem using a single "for" loop?</li>
+      <p>
+        Yes, it’s possible to solve the problem using a single “for” loop in part 1. In the initialization of the for loop we put in two expressions which are executed right away. This is where we set the starting value for each of our lines of
+        numbers. Then we insert the condition expression, which only needs to be one of our starting values, as both count simultaneously. The loop wil continue until the value of the condition is false, then the “for” loop will terminate. We also
+        make sure to increase the value by 1 for each round. This way we only need one single “for” loop. Ex: for (let i = 1, j = 10; i <= 10; i++, j--)
+      </p>
+
+      <li>In part 2, can we create what is known as an "infinite" loop within the condition of the "while" loop? Describe what would or would not be necessary to achieve this. Provide a thorough explanation of your answer.</li>
+      <p>
+        Yes, it’ possible to create an infinite loop within the condition of a while loop. An infinite loop means that the loop never terminates on its own, and in JavaScript this happens when the condition is always true. We could create a while
+        loop where the condition is true and then have an if loop inside of it that would guess the number. Here the condition will never become false, so the loop runs until we use aa break statement to stop it. This is a safe approach as we still
+        have control by breaking out when the correct condition is met. Therefore, to achieve this infinite loop the condition must always be evaluated to true, for example: while(true). You must also have a way to exit the loop for it to be
+        successful, for example with a break statement inside the loop.
+      </p>
+
+      <li>
+        Discuss briefly how quickly or slowly a computer might be able to compute this, considering the number of guesses and the time it takes. How does the program behave while it is guessing? Can the program perform other tasks concurrently?
+      </li>
+      <p>
+        The specific speed the computer uses in the guessing games depends on the size of the range of numbers being guessed. In part 2 the program only uses a range between 1 and 60, which is relatively small. There fore the expected number of
+        guesses is relatively low, and the computer figures this out very quickly. Part 3 involves a much larger range of numbers between 1 and 1,000,000 which therefore has a much higher expected number of guesses which would result in a noticeable
+        delay, but it varies and depends on the random attribute. While the program is running through these loops, it is essentially busy spinning continuously, generating random numbers and checking the conditions. It cannot simultaneously run
+        other tasks since the thread is occupied. The program will run the loop block until the condition is met and then naturally move onto the next piece of code.
+      </p>
+
+      <li>Explain the relationship between rows and columns in nested "for" loops. Can we, for instance, change the order, considering rows to be innermost or columns to be innermost, or does this not matter?</li>
+      <p>
+        In nested for loops, we have an outer loop and inner loop. Tehe outer loop controls what usually is the rows, and the inner loop controls the columns. For example, in part 5 the outer loop is for the rows, and the inner loop is for the
+        columns, this is also where the text for each row is created. Changing the order of the loops will change how the data or output is generated. If columns are the outer loop and rows are the inner loop, the output would build column by column
+        instead of row by row. Which may produce a different visual or logical result, depending on the application. Therefore, the order matters if the relationship between the rows and the columns is significant, such as printing out a table. For
+        tasks where the order does not affect the result, the loops could theoretically be swapped without it having too much meaning. But unless there is a reason to swap them around, I would stick to the “normal” approach which would be the outer
+        loop for rows and the inner loop for the columns.
+      </p>
     </ol>
     <script type="module" src="./task_3-2.mjs" defer></script>
   </body>
