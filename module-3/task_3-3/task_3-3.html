@@ -10,8 +10,37 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>What is the difference between invoking and creating a function?</li>
+      <p>
+        To create a function, you will have to write a block of code inside the function that tells the function what to do. Here you will have to think about how the function will be used later in your code. The invoking of a function is what we
+        also refer to as calling on the function. When we want to use a function in our code we have to “call” it for the code to run it, we are signaling for the code to use the function. We might also have the ability to put in some parameters if
+        the function is defined to accept them.
+      </p>
+      <li>Explain the syntax regarding semicolons and code blocks.</li>
+      <p>
+        In the JavaScript language we use semicolons to mark the end of a statement. While code blocks have a {} to show where the block starts and ends. So if we are using an if else statement, we will have code blocks inside of every branch
+        signaled with {}, and inside the code block every single statement will end with a semicolon.
+      </p>
+      <li>What happens when we try to store values from a function when it doesn't return any?</li>
+      <p>
+        If we are writing a code without using return, the function will automatically return undefined. Therefore, If we later decide to put the result of the function in a variable, it will always output to undefined. If we use the printout method
+        in our function it will print out and have an output, but it technically won’t return anything.
+      </p>
+      <li>How do we separate parameters from each other when creating a function?</li>
+      <p>When we create functions, we sometimes must put parameters into it, inside the () after the function name. We must separate these with commas for them to work.</p>
+      <li>Explain how parameter names are related during the invocation and creation of a function.</li>
+      <p>
+        When we create a function with parameters, they are only placeholders. When we invoke/call the unction we put arguments inside the () after the function name. Each of these arguments will be assigned to the corresponding parameter in order.
+        So, if we have a function with a parameter name, we will call the function like normal with the function name, and then we will put our name into to following argument in the (). So, our name will be used where the name parameter was in the
+        function and throughout the function.
+      </p>
+      <li>Explain why a parameter is undefined when a function call is missing a parameter.</li>
+      <p>If we have for example, have two parameters in a function, and only call the function with one argument, the other argument that is missing will automatically be undefined instead of showing us an error.</p>
+      <li>Explain what happens when we use recursive functions.</li>
+      <p>
+        A recursive function is a function that calls on itself within the code of the function. For it not to run an infinite number of times, we must put in what is called a base case for it to stop the recursion when a specific condition is met.
+        We use this in part 10, where we use an if else statement in the recursive function. In the if branch we have the base case, which states that when x is equal to 1 the recursive function will stop.
+      </p>
     </ol>
     <script type="module" src="./task_3-3.mjs" defer></script>
   </body>
