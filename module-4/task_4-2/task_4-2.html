@@ -10,8 +10,59 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>What is an array? A short and concise answer is expected here!</li>
+      <p>
+        An array is a data structure that allows us to store multiple values in a single variable. Each value has a numbered position called an index, which makes it easy to access, modify, or iterate through the elements. Arrays are useful for
+        grouping related data together.
+      </p>
+
+      <li>What does it mean to "hardcode" when we talk about programming? (In English, it's called "hard coding", "hard-coding", or "hardcoding").</li>
+      <p>
+        Hardcoding is when we as programmers write fixed values directly into the code, like "const x = 5", instead of reading the value from user input or a variable. This makes the code less flexible, because if we want to change the values, we
+        have to modify the program itself.
+      </p>
+
+      <li>Explain in plain text what happens in task 3, and how we can traverse (iterate) the array when we (humans) don't "know" how long the array is.</li>
+      <p>
+        We create the array using a loop. Each time the loop runs, a new value is added to the array. We use ".length" to check how many elements the array contains. Using "for (let i = 0; i < array.length; i++)", the loop will stop when it reaches
+        the length of the array. This way the code can handle arrays of any size, even if we as programmers don’t know how long it is.
+      </p>
+
+      <li>Why is it beneficial to store instances of a class in arrays, as in task 4?</li>
+      <p>This allows us to manage multiple objects in an organized way. We can loop through the objects, sort them, filter them, and apply functions to them. It also makes the program easier to maintain and extend.</p>
+
+      <li>
+        Try your best to explain the EWeekDays object from task 7. How do we use the "value" attribute, for example? In what way do "WeekDay", "Workdays", and "Weekends" differ from each other? If we wanted to create a new element "WorkoutDays",
+        which would contain "Monday", "Wednesday", and "Thursday", how would it ideally look?
+      </li>
+      <p>
+        The "EWeekDays" object is like an enumeration where each day is represented as an object with a "name" and a "value". The "value" can be used to represent the day numerically, for calculations, or to combine multiple days using sums.
+        “WeekDay” represents a single day, “Workdays” is a group containing Monday to Friday, and “Weekends” contains Saturday and Sunday. A new category “WorkoutDays” for Monday, Wednesday, and Thursday could look like this:<br />
+        WorkoutDays: [<br />
+        EWeekDays.Weekday1, // Monday<br />
+        EWeekDays.Weekday3, // Wednesday<br />
+        EWeekDays.Weekday4 // Thursday<br />
+        ]<br />
+        This reuses the existing weekdays to create a new logical group.
+      </p>
+
+      <li>In task 8, we will use a "callback" routine when sorting. Explain how such a "callback" routine works.</li>
+      <p>
+        A callback is a function we pass to another function to tell it how to work. In sorting, the callback receives two elements at a time and returns a number. If the number is negative, the first element comes before the second; if zero, the
+        elements are equal; if positive, the first element comes after the second.
+      </p>
+
+      <li>What happens in the sorting routines you have created? Try to explain how the array can figure out if an element should come before or after another.</li>
+      <p>
+        When sorting, the algorithm picks two elements (a and b) and calls the callback function. The callback returns a negative, zero, or positive value depending on the comparison of the elements. The algorithm decides whether to swap the elements
+        based on this return value.
+      </p>
+
+      <li>In task 10, we will create an array with rows and columns. Explain what the first element of the array contains.</li>
+      <p>
+        The array is two-dimensional. The first element of the array ("table[0]") contains the first row, which is itself an array. Each element inside this row represents a column, for example "table[0][0]" is the first row, first column,
+        "table[0][1]" is the first row, second column, and so on. So the first element holds all the cells of the first row.
+      </p>
     </ol>
     <script type="module" src="./task_4-2.mjs" defer></script>
   </body>
