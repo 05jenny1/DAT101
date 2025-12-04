@@ -1,105 +1,134 @@
 <!DOCTYPE html>
-<html lang="no" style="display: table; margin: auto;">
-<head>
-  <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
-  <title>Task 4.3</title>
-</head>
-<body style="display: table-cell; vertical-align: middle;">
-<h2>Task 4.3:</h2>
-<p></p>
-<fieldset>
-  <legend>Task 1: Rectangle</legend>
-  <label for="txtRectWidth">Width:</label>
-  <input type="number" id="txtRectWidth" value="0" style="width:4em">
-  <label for="txtRectHeight">Height:</label>
-  <input type="number" id="txtRectHeight" value="0" style="width:4em">
-  <input type="button" id="cmbTask1Calculate" value="Calculate">
-  <p id="txtTask1Output">
-    Circumference = 0, Area = 0
-  </p>
-</fieldset>
-<p></p>
-<fieldset>
-  <legend>Task 2: Text</legend>
-  <label for="txtTask2Word">Type a word:</label>
-  <input type="text" id="txtTask2Word" value="" style="width: 10em"> (hit enter!)
-  <p id="txtTask2Output">Number of words = 0</p>
-</fieldset>
-<p></p>
-<fieldset>
-  <legend>Task 3: Text</legend>
-  <p>Check one or more as you please</p>
-  <label><input type="checkbox" name="chkTask3" value="1">1: Cat is an animal!<br/></label>
-  <label><input type="checkbox" name="chkTask3" value="2">2: Volvo is a car!<br/></label>
-  <label><input type="checkbox" name="chkTask3" value="3">3: Rose is a flower!<br/></label>
-  <label><input type="checkbox" name="chkTask3" value="4">4: Donald Trump is a human being!<br/></label>
-  <label><input type="checkbox" name="chkTask3" value="5">5: Dette er en test<br/></label>
-  <input type="button" id="cmbTask3CheckAnswer" value="Check Answer!"><br/>
-  <p id="txtTask3Output"></p>
-</fieldset>
-<p></p>
-<fieldset>
-  <legend>Task 4: Cars</legend>
-  <p>Please select your favorite car brand!</p>
-  <div id="divTask4Cars">
-  </div>
-  <p id="txtTask4Output"></p>
-</fieldset>
-<p></p>
-<fieldset>
-  <legend>Task 5: Animals</legend>
-  <label for="selectTask5Animals">Choose a animal:</label>
-  <select id="selectTask5Animals">
-    <option value="1" selected="selected">Giraffe</option>
-    <option value="2">Peacock</option>
-    <option value="3">Llama</option>
-    <option value="4">Chinchilla</option>
-    <option value="5">Dog</option>
-    <option value="6">Cat</option>
-    <option value="7">Duck</option>
-    <option value="8">Elephant</option>
-  </select>
-  <p id="txtTask5Output"></p>
-</fieldset>
-<p></p>
-<fieldset>
-  <legend>Task 6: Names</legend>
-  <label for="selectTask6Girls">Choose a name:</label>
-  <select id="selectTask6Girls">
-  </select>
-  <p id="txtTask6Output">You selected: </p>
-</fieldset>
-<p></p>
-<fieldset>
-  <legend>Task 7: Movies</legend>
-  <label for="txtMovieTitle">Title: </label>
-  <input type="text" id="txtMovieTitle" style="width: 15em">
-  <label for="selectMovieGenre">Genre: </label>
-  <select id="selectMovieGenre" style="width: 10em"></select>
-  <p></p>
-  <label for="txtMovieDirector">Director: </label>
-  <input type="text" id="txtMovieDirector" style="width: 21em">
-  <label for="txtMovieRate">Rate: </label>
-  <input type="number" id="txtMovieRate" min="1" max="10" value="5" style="width: 3em">
-  <p></p>
-  <input type="button" id="cmbAddMovie" value="Add Movie!">
-  <div>
-    <h3>My movies:</h3>
-    <table id="tblMovies">
-      <tr>
-        <th>Nr:</th>
-        <th>Title:</th>
-        <th>Genre:</th>
-        <th>Director:</th>
-        <th>Rate:</th>
-      </tr>
-    </table>
-  </div>
-</fieldset>
-<ol>
-  <li>[Write the question here, and copy this for more questions]</li>
-  <p>[Write your answer here, and copy this for more answers]</p>
-</ol>
-<script type="module" src="./task_4-3.mjs" defer></script>
-</body>
+<html lang="no" style="display: table; margin: auto">
+  <head>
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4.3</title>
+  </head>
+  <body style="display: table-cell; vertical-align: middle">
+    <h2>Task 4.3:</h2>
+    <p></p>
+
+    <!--Part 1-->
+    <fieldset>
+      <legend>Task 1: Rectangle</legend>
+      <label for="txtRectWidth">Width:</label>
+      <input type="number" id="txtRectWidth" value="0" style="width: 4em" />
+
+      <label for="txtRectHeight">Height:</label>
+      <input type="number" id="txtRectHeight" value="0" style="width: 4em" />
+
+      <input type="button" id="cmbTask1Calculate" value="Calculate" />
+      <p id="txtTask1Output">Circumference = 0, Area = 0</p>
+    </fieldset>
+    <p></p>
+    <fieldset>
+      <legend>Task 2: Text</legend>
+      <label for="txtTask2Word">Type a word:</label>
+      <input type="text" id="txtTask2Word" value="" style="width: 10em" /> (hit enter!)
+      <p id="txtTask2Output">Number of words = 0</p>
+    </fieldset>
+    <p></p>
+    <fieldset>
+      <legend>Task 3: Text</legend>
+      <p>Check one or more as you please</p>
+      <label><input type="checkbox" name="chkTask3" value="1" />1: Cat is an animal!<br /></label>
+      <label><input type="checkbox" name="chkTask3" value="2" />2: Volvo is a car!<br /></label>
+      <label><input type="checkbox" name="chkTask3" value="3" />3: Rose is a flower!<br /></label>
+      <label><input type="checkbox" name="chkTask3" value="4" />4: Donald Trump is a human being!<br /></label>
+      <label><input type="checkbox" name="chkTask3" value="5" />5: Dette er en test<br /></label>
+      <input type="button" id="cmbTask3CheckAnswer" value="Check Answer!" /><br />
+      <p id="txtTask3Output"></p>
+    </fieldset>
+    <p></p>
+    <fieldset>
+      <legend>Task 4: Cars</legend>
+      <p>Please select your favorite car brand!</p>
+      <div id="divTask4Cars"></div>
+      <p id="txtTask4Output"></p>
+    </fieldset>
+    <p></p>
+    <fieldset>
+      <legend>Task 5: Animals</legend>
+      <label for="selectTask5Animals">Choose a animal:</label>
+      <select id="selectTask5Animals">
+        <option value="1" selected="selected">Giraffe</option>
+        <option value="2">Peacock</option>
+        <option value="3">Llama</option>
+        <option value="4">Chinchilla</option>
+        <option value="5">Dog</option>
+        <option value="6">Cat</option>
+        <option value="7">Duck</option>
+        <option value="8">Elephant</option>
+      </select>
+      <p id="txtTask5Output"></p>
+    </fieldset>
+    <p></p>
+    <fieldset>
+      <legend>Task 6: Names</legend>
+      <label for="selectTask6Girls">Choose a name:</label>
+      <select id="selectTask6Girls"></select>
+      <p id="txtTask6Output">You selected:</p>
+    </fieldset>
+    <p></p>
+    <fieldset>
+      <legend>Task 7: Movies</legend>
+      <label for="txtMovieTitle">Title: </label>
+      <input type="text" id="txtMovieTitle" style="width: 15em" />
+      <label for="selectMovieGenre">Genre: </label>
+      <select id="selectMovieGenre" style="width: 10em"></select>
+      <p></p>
+      <label for="txtMovieDirector">Director: </label>
+      <input type="text" id="txtMovieDirector" style="width: 21em" />
+      <label for="txtMovieRate">Rate: </label>
+      <input type="number" id="txtMovieRate" min="1" max="10" value="5" style="width: 3em" />
+      <p></p>
+      <input type="button" id="cmbAddMovie" value="Add Movie!" />
+      <div>
+        <h3>My movies:</h3>
+        <table id="tblMovies">
+          <tr>
+            <th>Nr:</th>
+            <th>Title:</th>
+            <th>Genre:</th>
+            <th>Director:</th>
+            <th>Rate:</th>
+          </tr>
+        </table>
+      </div>
+    </fieldset>
+    <ol>
+      <li><strong>this assignment, we use the DOM. Explain how this library can help us develop interactive web pages.</strong></li>
+      <p>
+        The Document Object Model (DOM) is the structure that the browser creates from an HTML page. It is a built-in interface that allows JavaScript to access and change the webpage while it is running. The DOM represents all the elements as
+        objects that JavaScript can work with.
+        <br /><br />
+        By using the DOM, we can read values from input fields, update text, change styles, create new elements, or remove elements. The DOM is what makes interactive web pages possible, because it lets JavaScript communicate directly with HTML.
+      </p>
+
+      <li><strong>What is an event? Simply explain what happens when we add an event listener to an object.</strong></li>
+      <p>
+        An event is something that happens in the browser, for example a mouse click, a key press, moving the mouse, or selecting something in a dropdown.
+        <br /><br />
+        When we add an event listener to an object, we tell the browser to “listen” for a specific event on that element. When the event occurs, the browser automatically runs the function we have connected to that event.
+      </p>
+
+      <li><strong>Sometimes we need to use an event object to get data from the event. Explain how this event object is structured, and how to retrieve data from a keyboard or mouse.</strong></li>
+      <p>
+        When an event occurs, the browser creates an event object. This object contains information about what happened.
+        <br /><br />
+        For keyboard events, the event object includes which key was pressed, for example <code>event.key</code>. For mouse events, the event object includes the mouse position on the screen. <br /><br />
+        This event object is automatically sent to the event listener’s function, so we can read the information inside it and use it in our program.
+      </p>
+
+      <li><strong>Explain the main difference between DOM id and DOM name. Can we have identical IDs?</strong></li>
+      <p>
+        The main difference between id and name in the DOM is that an id must be unique. It identifies one specific element on the page, and JavaScript functions like <code>getElementById</code> rely on this uniqueness. <br /><br />
+        A name, however, can be shared by multiple elements. This is useful for grouping elements, such as radio buttons that belong to the same group, like in part 4 of the assignment.
+        <br /><br />
+        Because of this, we cannot have identical IDs in the same HTML document. If two elements have the same ID, the browser would not know which one to return, and it breaks the DOM rules. Names, however, can and often should be shared.
+      </p>
+    </ol>
+
+    <script type="module" src="./task_4-3.mjs" defer></script>
+  </body>
 </html>
