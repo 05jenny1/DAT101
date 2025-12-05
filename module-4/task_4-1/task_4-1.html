@@ -10,8 +10,33 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>Why is object-oriented development so important in programming?</li>
+      <p>
+        Object-oriented development is important because it helps us think about code in a way that works like the real world. Instead of just having a bunch of loose functions and variables, we can group data and behavior together into objects. This
+        makes programs easier to read, easier to maintain, and easier to expand as projects get bigger, especially if there are several coders working together on the project. For example, if you have multiple types of accounts in a banking system,
+        each account can be an object with its own properties and methods, instead of handling everything in one big function. It also makes it much easier to reuse the code without having to repeat all the logic.
+      </p>
+
+      <li>In Task 1, we create a static object called "AccountType." Explain what this object is used for and how this type of object can help us in software development.</li>
+      <p>
+        The AccountType object is basically a container for all the possible types of bank accounts, like Normal, Saving, Credit, and Pension. By using this static object, we can refer to account types consistently throughout our code without
+        repeating strings everywhere. This helps prevent errors like typos and makes it easier to change or add new types later on. So instead of remembering the exact string "Sparekonto" every time, we just use AccountType.Saving, which makes the
+        code cleaner.
+      </p>
+
+      <li>Discuss why we use encapsulation in classes. Why do we want to "hide" code within our class? Explain how we can create "private" and "public" members in a constructor function.</li>
+      <p>
+        Encapsulation is all about hiding the internal workings of a class so that other parts of the program can’t mess with it directly. For example, a bank account’s balance shouldn’t be changed randomly from outside the class; it should only
+        change through controlled methods like deposit or withdraw. In JavaScript, we can create private members by using # before a property, like #balance, which can’t be accessed directly from outside the class. Public members, like methods
+        deposit() or getBalance(), provide a safe way for external code to interact with the object.
+      </p>
+
+      <li>Explain what happens when we use the "new" command in JavaScript.</li>
+      <p>
+        When we use new with a class or constructor function, a brand new object is created. Then the constructor function runs with this pointing to that new object. All the properties and methods defined inside the constructor are assigned to the
+        object. The new object also automatically inherits methods from the class prototype. Finally, the object is returned. This process allows us to create multiple independent instances of the same class, each with its own state and behavior. For
+        example, we can have several bank accounts, each with its own balance and type, without them interfering with each other.
+      </p>
     </ol>
     <script type="module" src="./task_4-1.mjs" defer></script>
   </body>
